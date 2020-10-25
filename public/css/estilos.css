@@ -1,0 +1,531 @@
+@import url('https://fonts.googleapis.com/css?family=Istok+Web&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Cuerpo */
+
+body{
+    font-family: 'Istok Web', sans-serif;
+    font-size: 16px;
+}
+
+/* Contenedor */
+
+.contenedor_nav{
+    width: 100%;
+    margin: auto;
+}
+
+/* Navegador */
+
+nav{
+    width: 100%;
+    height: 57px;
+    background: #262a5a;
+}
+
+.navega{
+    width: 85%;
+    height: 100%;
+    padding: 0 10px;
+    background: #34396a;
+    float: left;
+}
+
+.ingreso{
+    width: 15%;
+    height: 100%;
+    float: left;
+}
+
+/* Nivel 0 */
+
+header nav ul{
+    list-style: none;
+    text-align: center;
+}
+
+header nav ul li{
+    width: 130px;
+}
+
+header nav ul li:hover ul{
+    display: block;
+}
+
+header nav .navega ul li{
+    background: #34396a;
+}
+
+header nav .navega>ul>li {
+    display: inline-block;
+}
+
+header nav .ingreso ul li{
+    width: 100%;
+}
+
+header nav ul li a{
+    display: block;
+    text-decoration: none;
+    color: #fff;
+    padding: 15px 5px;
+    text-align: center;
+    border-bottom: 2px solid #fff;
+}
+
+header nav ul li a:hover{
+    background: rgba(0,0,0,0.5);
+    border-bottom: 2px solid #d95825;
+}
+
+/* Nivel 1 */
+
+header nav li ul{
+    position: absolute;
+    display: none;
+}
+
+header nav .ingreso li ul{
+    width: 14.3%;
+    background: #34396a;
+}
+
+/* Clase para barra de navegación fija */
+/* Se agrega desde el js */
+
+.menu_fixed{
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+}
+
+/* Header */
+
+header{
+    width: 100%;
+    height: 650px;
+    background-image: url(../img/encabezado.png);
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    overflow: hidden;
+    color: #8015aa;
+    text-align: center;
+}
+
+header .textos{
+    margin-top: 152px;
+}
+
+header .titulo{
+    font-size: 85px;
+}
+
+header .subtitulo{
+    font-size: 42px;
+    font-weight: 300;
+    margin-bottom: 32px;
+}
+
+/*header .boton {
+    display: inline-block;
+    padding: 6px;
+    width: 128px;
+    border: 1px solid #034abc;
+    color: #034abc;
+    font-size: 19px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 16px;
+}*/
+
+/* Estilo corte inferior y superior */
+
+.sesgoabajo{
+    z-index: 10;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    border-width: 0 0 35vh 100vw;
+    border-style: solid;
+    border-color: transparent transparent #fff transparent; 
+}
+
+.sesgoarriba{
+    z-index: 10;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-width: 35vh 100vw 0 0;
+    border-style: solid;
+    border-color: #fff transparent transparent transparent;
+}
+
+/* Quiénes somos */
+
+.contenedor{
+    width: 90%;
+    max-width: 1000px;
+    margin: auto;
+    overflow: hidden;
+    padding: 52px 0;
+}
+
+.quienes_somos{
+    text-align: center;
+    font-size: 56px;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.eslogan{
+    font-size: 24px;
+    font-weight: 300;
+    text-align: center;
+    margin-bottom: 24px;
+}
+
+.parrafo{
+    margin-bottom: 13px;
+    font-weight: 300;
+    text-align: justify;
+    line-height: 40px;
+    color: rgb(24, 16, 16);
+    font-size: 24px;
+}
+
+/*.quienes_somos .boton{
+    display: inline-block;
+    padding: 6px;
+    width: 128px;
+    border: 1px solid #034abc;
+    color: #034abc;
+    font-size: 19px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 16px;
+    display: inline-block;
+    padding: 6px;
+    width: 128px;
+    font-weight: 300;
+    border: 1px solid rgba(24, 16, 16, .7);
+    color: rgb(24, 16, 16);
+    font-size: 16px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 16px;
+    margin-top: 24px;
+}*/
+
+/* Galeria */
+
+.galeria{
+    width: 100%;
+    height: 500px;
+    overflow: hidden;
+    display: flex;
+    position: relative;
+    flex-wrap: wrap;
+}
+
+.imagenes{
+    width: 20%;
+    height: 500px;
+    overflow: hidden;
+    position: relative;
+}
+
+.imagenes img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.mitad{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(52, 73, 94, 0.815);
+}
+
+.mitad img{
+    width: 100%;
+    height: 90%;
+    object-position: center;
+}
+
+.mitad div{
+    position: relative;
+    display: block;
+    top: 46%;
+    width: 40px;
+    height: 5px;
+    background: #fff;
+    margin: auto;
+}
+
+/* Productos */
+
+.algunos_productos{
+    text-align: center;
+    font-size: 56px;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.cards{
+    width: 100%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.card{
+    margin: 20px 0;
+    width: 30%;
+    height: 250px;
+    text-align: center;
+    padding: 20px;
+    box-shadow: 0px 0px 4px 0px rgba(52, 73, 94, 0.849);
+    background: #76788A;
+}
+
+.cards img{
+    width: 140px;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 100%;
+}
+
+.cards h4{
+    font-size: 24px;
+    font-weight: 300;
+    margin-bottom: 32px;
+    padding: 20px;
+    color: #fff;
+}
+
+.cards h3{
+    font-size: 30px;
+    font-weight: 300;
+    margin-bottom: 32px;
+    padding: 80px 0 0 0;
+}
+
+/* Fondo inferior */
+
+.fondo{
+    height: 900px;
+    position: relative;
+    background-image: url(../img/fondo.png);
+    overflow: hidden;
+    background-attachment: fixed;
+    background-position: center;
+    padding-top: 130px
+}
+
+/* Estilo corte inferior */
+
+.sesgoabajo_unico{
+    z-index: 10;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    border-width: 0 0 35vh 100vw;
+    border-style: solid;
+    border-color: transparent transparent #ba007c transparent;
+}
+
+/* Clientes */
+
+.titulo_clientes,
+.subtitulo_clientes{
+    color: #fff;
+    text-align: center;
+}
+
+.titulo_clientes{
+    font-size: 56px;
+    margin-top: 48px;
+}
+
+.subtitulo_clientes{
+    font-size: 24px;
+    font-weight: 300;
+    margin-bottom: 64px;
+    margin-top: 30px;
+}
+
+.clientes{
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 64px;
+    width: 100%;
+    justify-content: space-between;
+    margin-right: 50px;
+}
+
+.cliente{
+    width: 100%;
+}
+.cliente img{
+    width: 320px;
+    height: 200px;
+    object-fit: cover;
+}
+
+/* Pie de página */
+
+footer{
+    background: #ba007c;
+    height: auto;
+}
+
+.titulo_footer,
+.subtitulo_footer{
+    color: #fff;
+    text-align: center;
+    font-weight: 400;
+    font-size: 56px;
+}
+
+.subtitulo_footer{
+    font-size: 16px;
+    margin-bottom: 64px;
+}
+
+form{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: auto;
+}
+
+input[type="text"],
+input[type="email"] {
+    display: inline-block;
+    width: 48%;
+    padding: 13px;
+    border: none;
+    color: #fff;
+    font-family: 'Istok Web', sans-serif;;
+    background: rgba(37, 37, 33, .7);
+    margin-bottom: 16px;
+    border-top: 5px solid rgba(37, 37, 33, .7);
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+    border-top: 5px solid rgba(255, 255, 255, 0.7);
+}
+
+textarea {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    min-width: 100%;
+    max-height: 200px;
+    min-height: 200px;
+    background: rgba(37, 37, 33, .7);
+    padding: 13px;
+    border: none;
+    color: #fff;
+    font-family: 'Istok Web', sans-serif;;
+    margin-bottom: 16px;
+}
+
+input[type="submit"] {
+    display: inline-block;
+    padding: 13px;
+    border: none;
+    color: #fff;
+    background: rgba(37, 37, 33, .7);
+    width: 96px;
+}
+
+/* Responsive */
+
+@media screen and (max-width:900px) {
+    .card {
+        width: 48%;
+    }
+}
+
+@media screen and (max-width:610px) {
+    header .textos {
+        margin-top: 130px;
+    }
+
+    header .titulo {
+        font-size: 75px;
+    }
+
+    .none {
+        display: none
+    }
+
+    .imagenes {
+        flex-grow: 1;
+    }
+
+    .card {
+        width: 90%;
+    }
+
+    .fondo {
+        height: auto;
+    }
+
+    .especial {
+        display: none;
+    }
+
+    .cliente {
+        width: 90%;
+        height: 200px;
+        margin-bottom: 50px;
+    }
+}
+
+@media screen and (max-width:380px) {
+    header .textos {
+        margin-top: 100px;
+    }
+
+    header .titulo {
+        font-size: 65px;
+    }
+
+    header .subtitulo {
+        font-size: 25px;
+        margin-bottom: 32px;
+    }
+
+    .quienes_somos {
+        font-size: 46px;
+    }
+
+    .eslogan {
+        font-size: 20px;
+    }
+
+    .titulo_clientes {
+        font-size: 46px;
+    }
+
+    .subtitulo_clientes {
+        font-size: 20px;
+    }
+}

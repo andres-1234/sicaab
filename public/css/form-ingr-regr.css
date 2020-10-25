@@ -1,0 +1,188 @@
+@import url('https://fonts.googleapis.com/css2?family=Istok+Web&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    font-family: 'Istok Web', sans-serif;;
+    outline: none;
+    border: none;
+}
+
+html, body{
+    height: 100%;
+    background: #B7D2D5;
+}
+
+.align{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding-bottom: 8px;
+}
+
+.logo{
+    width: 220px;
+}
+
+.card{
+    margin-top: 28px;
+    height: 100%;
+    max-height: 446px;
+    width: 396px;
+    background: #275877;
+    border: 1px solid #373737;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: 0.2s;
+}
+
+.extend{
+    max-height: 480px;
+}
+
+.head{
+    width: 100%;
+    display: flex;
+    height: 72px;
+    border-bottom: 1px solid #373737;
+    justify-content: space-between;
+}
+
+.head a{
+    height: 100%;
+    padding: 0 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgb(140, 140, 140);
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.head .selected{
+    position: relative;
+    color: #F2E6A7;
+    font-weight: 700;
+}
+
+.head .selected:after{
+    position:  absolute;
+    content: "";
+    bottom: 0;
+    left: 0;
+    height: 5px;
+    width: 100%;
+    background: #B7D2D5;
+    border-radius: 99px 99px 0 0;
+}
+
+.tabs{
+    height: calc(100% - 72px);
+    display: flex;
+}
+
+form {
+    width: 100%;
+    height: 100%;
+    flex-shrink: 0;
+    padding: 44px 38px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    right: 0;
+    transition: right 0.2s;
+}
+
+.extend form {
+    right: 100%;
+}
+
+.inputs{
+    width: 100%;
+    padding-top: 6px;
+}
+
+.input{
+    position: relative;
+    margin-bottom: 20px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.input input{
+    width: 100%;
+    font-size: 17px;
+    background: #1c1c1c;
+    border-radius: 8px;
+    padding: 16px 18px 16px 51px;
+    color: rgb(220, 220, 220);
+}
+
+i {
+    color: #F2E6A7;
+}
+
+.input i{
+    width: 16px;
+    position: absolute;
+    left: 19px;
+}
+
+.checkbox{
+    height: 40px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+}
+
+.checkbox input{
+    position: absolute;
+    opacity: 0;
+    height: 0;
+    width: 0;
+}
+
+.checkbox span{
+    display: flex;
+    align-items: center;
+    color: #F2E6A7;
+    font-size: 18px;
+    user-select: none;
+}
+
+.checkbox span:before{
+    content: "";
+    width: 22px;
+    height: 22px;
+    border-radius: 6px;
+    margin-right: 16px;
+    background-color: #1c1c1c;
+}
+
+.checkbox:hover input ~ span:before{
+    background-color: rgb(50, 50, 50);
+}
+
+.checkbox input:checked ~ span:before{
+    background-image: url(../img/check-solid.svg);
+    background-size: cover;
+}
+
+.card .button{
+    display: block;
+    background: #F2E6A7;
+    padding: 14px 52px;
+    border-radius: 12px;
+    color: #1c1c1c;
+    font-weight: 700;
+    font-size: 21px;
+    cursor: pointer;
+}
